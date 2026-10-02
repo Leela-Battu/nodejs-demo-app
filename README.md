@@ -41,5 +41,5 @@ http://localhost:3000
 
 
 Docker:
-docker build -t nodejs-demo-app .
-docker run -p 3000:3000 nodejs-demo-app
+- docker build -t nodejs-demo-app .
+- docker run -p 3000:3000 nodejs-demo-app
