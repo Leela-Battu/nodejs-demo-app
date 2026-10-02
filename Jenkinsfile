@@ -23,14 +23,14 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t nodejs-demo-app .'
+                bat '"C:\\Users\\leela\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe" build -t nodejs-demo-app .'
             }
         }
 
         stage('Deploy') {
             steps {
-                bat 'docker rm -f nodejs-demo-container || exit 0'
-                bat 'docker run -d --name nodejs-demo-container -p 3000:3000 nodejs-demo-app'
+                bat '"C:\\Users\\leela\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe" rm -f nodejs-demo-container || exit 0'
+                bat '"C:\\Users\\leela\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe" run -d --name nodejs-demo-container -p 3000:3000 nodejs-demo-app'
             }
         }
     }
